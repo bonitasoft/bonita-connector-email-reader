@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${emailreader-mark-read.impl.id}</implementationId>
+  <implementationVersion>${emailreader-mark-read.impl.version}</implementationVersion>
+  <definitionId>${emailreader-mark-read.def.id}</definitionId>
+  <definitionVersion>${emailreader-mark-read.def.version}</definitionVersion>
+  <implementationClassname>${emailreader-mark-read.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>[BETA] Email Reader - Mark as Read connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

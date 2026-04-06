@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${emailreader-get-attachments.impl.id}</implementationId>
+  <implementationVersion>${emailreader-get-attachments.impl.version}</implementationVersion>
+  <definitionId>${emailreader-get-attachments.def.id}</definitionId>
+  <definitionVersion>${emailreader-get-attachments.def.version}</definitionVersion>
+  <implementationClassname>${emailreader-get-attachments.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>[BETA] Email Reader - Get Attachments connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

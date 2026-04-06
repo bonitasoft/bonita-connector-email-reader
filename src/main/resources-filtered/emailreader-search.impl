@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${emailreader-search.impl.id}</implementationId>
+  <implementationVersion>${emailreader-search.impl.version}</implementationVersion>
+  <definitionId>${emailreader-search.def.id}</definitionId>
+  <definitionVersion>${emailreader-search.def.version}</definitionVersion>
+  <implementationClassname>${emailreader-search.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>[BETA] Email Reader - Search Emails connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+    <id>${emailreader-mark-read.def.id}</id>
+    <version>${emailreader-mark-read.def.version}</version>
+    <icon>email-reader.png</icon>
+    <category id="Email Reader" icon="email-reader.png"/>
+
+    <!-- Connection inputs -->
+    <input name="imapHost" type="java.lang.String" mandatory="true"/>
+    <input name="imapPort" type="java.lang.Integer" mandatory="false" defaultValue="993"/>
+    <input name="username" type="java.lang.String" mandatory="true"/>
+    <input name="password" type="java.lang.String" mandatory="false"/>
+    <input name="authMode" type="java.lang.String" mandatory="false" defaultValue="PASSWORD"/>
+    <input name="oauth2AccessToken" type="java.lang.String" mandatory="false"/>
+    <input name="useTls" type="java.lang.Boolean" mandatory="false" defaultValue="true"/>
+    <input name="connectTimeout" type="java.lang.Integer" mandatory="false" defaultValue="30000"/>
+    <input name="readTimeout" type="java.lang.Integer" mandatory="false" defaultValue="60000"/>
+
+    <!-- Mark inputs -->
+    <input name="folderName" type="java.lang.String" mandatory="false" defaultValue="INBOX"/>
+    <input name="uids" type="java.lang.String" mandatory="true"/>
+
+    <!-- Outputs -->
+    <output name="markedCount" type="java.lang.Integer"/>
+    <output name="failedUids" type="java.lang.String"/>
+    <output name="success" type="java.lang.Boolean"/>
+    <output name="errorMessage" type="java.lang.String"/>
+
+    <!-- UI Pages -->
+    <page id="connectionPage">
+        <widget xsi:type="definition:Text" id="imapHostWidget" inputName="imapHost"/>
+        <widget xsi:type="definition:Text" id="imapPortWidget" inputName="imapPort"/>
+        <widget xsi:type="definition:Text" id="usernameWidget" inputName="username"/>
+        <widget xsi:type="definition:Password" id="passwordWidget" inputName="password"/>
+        <widget xsi:type="definition:Select" id="authModeWidget" inputName="authMode">
+            <items>PASSWORD</items>
+            <items>OAUTH2</items>
+        </widget>
+        <widget xsi:type="definition:Password" id="oauth2AccessTokenWidget" inputName="oauth2AccessToken"/>
+        <widget xsi:type="definition:Checkbox" id="useTlsWidget" inputName="useTls"/>
+        <widget xsi:type="definition:Text" id="connectTimeoutWidget" inputName="connectTimeout"/>
+        <widget xsi:type="definition:Text" id="readTimeoutWidget" inputName="readTimeout"/>
+    </page>
+    <page id="markPage">
+        <widget xsi:type="definition:Text" id="folderNameWidget" inputName="folderName"/>
+        <widget xsi:type="definition:Text" id="uidsWidget" inputName="uids"/>
+    </page>
+</definition:ConnectorDefinition>
